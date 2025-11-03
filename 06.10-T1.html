@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Магазин</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+
+        --color: #00796b;
+      }
+
+      html, body {
+        width: 100%;
+        height: 100%;
+      }
+
+      header {
+        display: flex;
+        justify-content: center;
+
+        color: white;
+        background-color: var(--color);
+
+        padding: 3vh;
+      }
+
+      main {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 5vh;
+        padding: 5vh;
+      }
+
+      .product-item {
+        border: 1px solid;
+        border-radius: 5px;
+        box-shadow: 0 0 10px gray;
+
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
+
+        width: 25%;
+        padding: 2vmin;
+      }
+
+      .buy-button {
+        color: white;
+        background-color: var(--color);
+
+        border: 1px solid;
+        border-radius: 5px;
+
+        padding: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Добро пожаловать в наш магазин</h1>
+    </header>
+    <main>
+      <div class="product-item">
+        <h2>Волшебная шляпа</h2>
+        <p>Лёгкая и удобная, усиливает магические способности владельца.</p>
+        <p>Цена: 150 злотых</p>
+        <button class="buy-button">Купить</button>
+      </div>
+      <div class="product-item">
+        <h2>Плащ-невидимка</h2>
+        <p>Позволяет скрываться от глаз врагов и преподавателей.</p>
+        <p>Цена: 300 злотых</p>
+        <button class="buy-button">Купить</button>
+      </div>
+      <div class="product-item">
+        <h2>Магический посох</h2>
+        <p>Усилитель заклинаний, идеально подходит для дуэлей.</p>
+        <p>Цена: 500 злотых</p>
+        <button class="buy-button">Купить</button>
+      </div>
+    </main>
+  </body>
+</html>

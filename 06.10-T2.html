@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поступление в Хогвартс</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+
+            color: var(--text-color);
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+
+            background-color: var(--bg-color);
+        }
+
+        main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            height: auto;
+        }
+
+        form {
+            display: flex;
+            align-items: left;
+            flex-direction: column;
+            gap: 2vh;
+
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+
+            padding: 5vmin;
+        }
+
+        label {
+            font-size: 1em;
+            background-color: var(--bg-color);
+        }
+
+        label > input, select {
+            font-size: 1em;
+            width: 100%;
+            height: 2em;
+
+            background-color: var(--bg-color);
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        label > input:focus, select:focus {
+            border-color: goldenrod;
+            box-shadow: 0 0 5px goldenrod;
+            outline: none;
+        }
+
+        #submit {
+            border: none;
+            border-radius: 5px;
+
+            color: #f1f1f1;
+
+            padding: 1em;
+            background-color: goldenrod;
+
+            cursor: pointer;
+        }
+
+        header {
+            padding: 2vmin;
+        }
+
+        #change-theme {
+            background-color: goldenrod;
+            color: #f1f1f1;
+
+            border: none;
+            border-radius: 5px;
+
+            box-shadow: 0 0 5px gray;
+            padding: 1em;
+
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button id="change-theme">Сменить тему</button>
+    </header>
+    <main>
+        <form>
+            <h1>Поступление в Хогвартс</h1>
+            <label for="name">
+                Имя:
+                <input type="text" name="name" required/>
+            </label>
+
+            <label for="house">
+                Факультет:
+                <select name="house">
+                    <option value="1">Гриффиндор</option>
+                    <option value="2">Слизерин</option>
+                    <option value="3">Пуффендуй</option>
+                    <option value="4">Когтевран</option>
+                </select>
+            </label>
+
+            <label for="wand">
+                Волшебная палочка:
+                <input type="text" name="wand" required/>
+            </label>
+
+            <input id="submit" type="submit" value="Отправить форму">
+        </form>
+    </main>
+
+    <script>
+        let theme = "dark";
+
+        function switch_theme() {
+            if (theme === "light") {
+                theme = "dark";
+                document.body.style.setProperty("--bg-color", "#1e1e1e");
+                document.body.style.setProperty("--text-color", "#f1f1f1");
+            } else {
+                theme = "light";
+                document.body.style.setProperty("--bg-color", "#f9f9f9");
+                document.body.style.setProperty("--text-color", "#222222");
+            }
+        }
+        switch_theme();
+
+        let btn = document.querySelector("#change-theme");
+
+        btn.addEventListener("click", switch_theme);
+    </script>
+</body>
+</html>
