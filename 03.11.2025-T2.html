@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, sans-serif;
+        }
+
+        body, html {
+            width: 100%;
+            min-height: 100%;
+        }
+
+        body {
+            background-color: gray;
+        }
+
+        #card {
+            background-color: white;
+            margin: 1rem auto;
+            width: 50%;
+            padding: 2rem;
+
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        #answer {
+            width: 100%;
+        }
+
+        ul, ol {
+            list-style-position: inside;
+        }
+
+        input[type="submit"] {
+            padding: 0.5rem;
+            background-color: purple;
+            color: white;
+            border: none;
+            margin-top: 1rem;
+            cursor: pointer;
+        }
+
+        input[type="text"] {
+            height: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="card">
+        <section id="title">
+            <h1>Урок математики</h1>
+            <h3>Сегодня</h3>
+            <img src="https://img.freepik.com/premium-vector/formula-pattern-math-geometry-formulas-with-letters-numbers-graphs-symbols-complex-scientific-diagrams-trigonometry-garish-vector-seamless-background_80590-16033.jpg" alt="Математика">
+        </section>
+        
+        <section id="info">
+            <h2>Важные понятия</h2>
+            <p>
+                <ul>
+                    <li>Сложение: описание</li>
+                    <li>Сложение: описание</li>
+                    <li>Сложение: описание</li>
+                </ul>
+            </p>
+        </section>
+
+        <section id="task">
+            <h2>Задание:</h2>
+            <p>Условие задания</p>
+        </section>
+
+        <section id="send">
+            <form>
+                <label for="answer">Введите ответ</label>
+                <input id="answer" type="text"/>
+                <input type="submit"/>
+            </form>
+        </section>
+
+        <section id="extra">
+            <h2>Дополнительные ресурсы</h2>
+            <p>
+                <ol>
+                    <li><a href="./">Статья</a></li>
+                </ol>
+            </p>
+        </section>
+    </div>
+</body>
+</html>
