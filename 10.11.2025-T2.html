@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 2rem;
+        }
+
+        table, tr, td, th {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+
+        td, th {
+            padding: 0.4rem;
+        }
+
+        th {
+            font-size: 1.25rem;
+            background-color: rgb(187, 174, 174);
+        }
+
+        td {
+            font-size: 1rem;
+        }
+
+        td:nth-child(3) {
+            text-align: right;
+        }
+
+        tr:nth-child(even) {
+            background-color: lightgray;
+        }
+
+        table {
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Наименование</th>
+                <th>Цена</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td>Молок пастиризованное</td>
+                <td>85 ₽</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td>Хлеб пшеничный</td>
+                <td>65 ₽</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td>Яйца куринные</td>
+                <td>120 ₽</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td>Картофель</td>
+                <td>55 ₽</td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td>Макароны</td>
+                <td>80 ₽</td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td>Курина грудка</td>
+                <td>450 ₽</td>
+            </tr>
+            <tr>
+                <th>7</th>
+                <td>Бананы</td>
+                <td>110 ₽</td>
+            </tr>
+            <tr>
+                <th>8</th>
+                <td>Сыр Российский</td>
+                <td>650 ₽</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="2">Итого</th>
+                <th>1650 ₽</th>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
